@@ -12,7 +12,7 @@ own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 double_buffer yes
 minimum_size 300 655
 maximum_width 200
-draw_shades yes
+draw_shades no
 draw_outline no
 draw_borders no
 draw_graph_borders yes
@@ -61,10 +61,10 @@ $font${top_mem name 4}${alignr}${top mem 4} %
 $font${top_mem name 5}${alignr}${top mem 5} %
 
 ${font sans-serif:bold:size=8}NETWORK ${hr 2}
-${font sans-serif:normal:size=8}IP address: $alignr ${addr wlan0}
-ESSID: $alignr ${wireless_essid wlan0}
-Connection quality: $alignr ${wireless_link_qual_perc wlan0}%
-${downspeedgraph wlan0}
-DLS:${downspeed wlan0} kb/s $alignr total: ${totaldown wlan0}
-${upspeedgraph wlan0}
-ULS:${upspeed wlan0} kb/s $alignr total: ${totalup wlan0}
+${font sans-serif:normal:size=8}IP address: $alignr ${addr wlp1s0}
+ESSID: $alignr ${wireless_essid wlp1s0}
+Connection quality: $alignr ${wireless_link_qual_perc wlp1s0}%
+${downspeedgraph wlp1s0}
+DLS:${downspeed wlp1s0} kb/s $alignr total: ${totaldown wlp1s0}
+${upspeedgraph wlp1s0}
+ULS:${upspeed wlp1s0} kb/s $alignr total: ${totalup wlp1s0}
