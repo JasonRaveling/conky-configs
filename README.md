@@ -1,2 +1,2 @@
-# conky-configs
-Conky configs because I want to easily customize and I feel like widgets will borrow too much RAM.
+# Installing
+Super simple. Just clone this repo to a directory of your liking and then make conky startup using these configs. If you want, you can even move the main config to `.conkyrc` or create a simlink.

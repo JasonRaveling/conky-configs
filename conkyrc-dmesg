@@ -1,0 +1,51 @@
+alignment bl
+gap_x 13
+gap_y 13
+minimum_size 1120 24
+maximum_width 1120
+own_window yes
+own_window_hints below,skip_pager,skip_taskbar,undecorated,sticky
+# transparency:
+own_window_argb_visual yes
+own_window_argb_value 0
+# font defaults:
+use_xft yes
+xftfont Sans:size=8
+xftalpha 0.9
+override_utf8_locale yes
+
+## NOTE: Other fonts can be called up during the TEXT formatting
+#  these fonts are found through the normal path, or ~/.fonts
+#  OpenLogos
+
+## images, buffering, shading
+imlib_cache_size 60
+double_buffer yes
+draw_shades yes
+default_shade_color 777777
+
+## misc text formatting
+short_units yes
+pad_percents 0
+border_inner_margin 0
+uppercase no
+use_spacer right
+
+## outlines and borders
+draw_outline no
+draw_borders no
+draw_graph_borders no
+border_width 0
+
+## stdout/console printing
+out_to_ncurses no
+out_to_console no
+
+## process settings
+top_name_width 5
+#no_buffers yes
+
+
+TEXT
+${font sans:bold:size=10}dmesg ${hr 2}
+${font sans:size=9}${exec dmesg | tail -n15}
