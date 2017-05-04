@@ -1,67 +1,73 @@
-background yes
-use_xft yes
-xftfont FreeSans:size=9
-xftalpha 1
-update_interval 8
+# OLD CONKY
+
+# - Conky Settings
+update_interval 10
 total_run_times 0
-own_window yes
-own_window_class Conky
-own_window_transparent yes
-own_window_type normal
-own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+cpu_avg_samples 1
 double_buffer yes
-minimum_size 300 655
-maximum_width 200
-draw_shades no
-draw_outline no
-draw_borders no
-draw_graph_borders yes
-default_color white
-default_shade_color black
-default_outline_color white
+no_buffers yes
+
+# - Text Settings
+use_xft = yes
+xftfont Sans:size=12
+override_utf8_locale yes
+text_buffer_size 2048
+
+# - Window specifications
+# xftalpha 1
+own_window_class Conky
+own_window yes
+own_window_type normal
+own_window_argb_visual yes
+own_window_argb_value 255
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 alignment top_right
 gap_x 12
 gap_y 40
-no_buffers yes
-uppercase no
-cpu_avg_samples 2
-override_utf8_locale no
-own_window_argb_visual yes
-own_window_argb_value 0
+minimum_size 300 655
+maximum_width 250
+
+# - Graphics settings
+draw_shades no
+draw_graph_borders yes
+default_color white
+default_outline_color white
+
 
 TEXT
-${font FreeSans:bold:size=8}SYSTEM ${hr 2}
-${font FreeSans:normal:size=8}$sysname $kernel $alignr $machine
+SYSTEM ${hr 2}
+$sysname $kernel $alignr $machine
 Host:$alignr$nodename
 Uptime:$alignr$uptime
 File System: $alignr${fs_type}
 
-${font FreeSans:bold:size=8}PROCESSORS ${hr 2}
-${font FreeSans:normal:size=8}${cpugraph cpu1, cpu2}
+PROCESSORS ${hr 2}
+${cpugraph cpu1, cpu2}
 CPU 1: ${cpu cpu1}% ${cpubar cpu1}
 CPU 2: ${cpu cpu2}% ${cpubar cpu2}
 CPU 3: ${cpu cpu3}% ${cpubar cpu3}
 CPU 4: ${cpu cpu4}% ${cpubar cpu4}
 
-${font FreeSans:bold:size=8}MEMORY ${hr 2}
-${font FreeSans:normal:size=8}RAM $alignc $mem / $memmax $alignr $memperc%
+MEMORY ${hr 2}
+RAM $alignc $mem / $memmax $alignr $memperc%
 $membar
 
-${font FreeSans:bold:size=8}DISKS ${hr 2}
-${font FreeSans:normal:size=8}/ $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /}%
+DISKS ${hr 2}
+/ $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /}%
 ${fs_bar /}
 SWAP $alignc ${swap} / ${swapmax} $alignr ${swapperc}%
 ${swapbar}
 
-${font FreeSans:bold:size=8}TOP PROCESSES ${hr 2}
-${font FreeSans:normal:size=8}${top_mem name 1}${alignr}${top mem 1} %
+TOP PROCESSES ${hr 2}
+${top_mem name 1}${alignr}${top mem 1} %
 ${top_mem name 2}${alignr}${top mem 2} %
-$font${top_mem name 3}${alignr}${top mem 3} %
-$font${top_mem name 4}${alignr}${top mem 4} %
-$font${top_mem name 5}${alignr}${top mem 5} %
+${alignr}${top mem 3} %
+${alignr}${top mem 4} %
+${alignr}${top mem 5} %
 
-${font FreeSans:bold:size=8}NETWORK ${hr 2}
-${font FreeSans:normal:size=8}IP address: $alignr ${addr wlp1s0}
+NETWORK ${hr 2}
+IP address: $alignr ${addr wlp1s0}
 ESSID: $alignr ${wireless_essid wlp1s0}
 Connection quality: $alignr ${wireless_link_qual_perc wlp1s0}%
 ${downspeedgraph wlp1s0}
