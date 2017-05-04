@@ -7,8 +7,8 @@ cpu_avg_samples 1
 double_buffer yes
 no_buffers yes
 
-# - Text Settings
-use_xft = yes
+# - Text settings
+use_xft yes
 xftfont Sans:size=12
 override_utf8_locale yes
 text_buffer_size 2048
@@ -23,7 +23,7 @@ own_window_argb_value 255
 own_window_transparent yes
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 alignment top_right
-gap_x 12
+gap_x 40
 gap_y 40
 minimum_size 300 655
 maximum_width 250
@@ -40,7 +40,6 @@ SYSTEM ${hr 2}
 $sysname $kernel $alignr $machine
 Host:$alignr$nodename
 Uptime:$alignr$uptime
-File System: $alignr${fs_type}
 
 PROCESSORS ${hr 2}
 ${cpugraph cpu1, cpu2}
