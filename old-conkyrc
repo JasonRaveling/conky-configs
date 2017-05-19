@@ -23,8 +23,8 @@ own_window_argb_value 255
 own_window_transparent yes
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 alignment top_right
-gap_x 300
-gap_y 60 
+gap_x 30
+gap_y 55
 minimum_size 300 655
 maximum_width 250
 
